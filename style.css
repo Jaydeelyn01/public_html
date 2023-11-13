@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+}
+
+a,
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1), -30px 0px 40px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.description {
+  padding: 2.5rem;
+  text-align: center;
+}
+
+#Portfolio {
+  padding: 1.5rem;
+  text-align: center;
+  background: #000bc4;
+  color: #ffffff;
+}
+
+header {
+  text-shadow: 1px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes anime {
+  from {
+    opacity: 0;
+    left: -200px;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+#header-text {
+  display: flex;
+  flex: 0 1 40vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  animation: anime 2s ease-in-out;
+}
+
+#header-text h2 {
+  color: #666;
+}
+
+#header-image {
+  background: url(images/gch.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  flex: 0 1 60vw;
+  margin: 0;
+  animation: anime 6s ease-in-out;
+}
+
+.btn {
+  padding: 0.5rem 2rem;
+  border: 1px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0;
+  border-radius: 50px;
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgb(0, 3, 194);
+}
+
+.btn i {
+  color: #fff;
+}
+
+.btn a {
+  color: #fff;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #555;
+}
+
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: none;
+}
+
+.btn a {
+  font-size: 1.2rem;
+}
+
+#Contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin: auto;
+  color: #333;
+  background-color: #fff;
+  text-shadow: 1px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+#Contact h3 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+#Contact div {
+  padding: 0.25rem 0;
+}
+
+#Contact i {
+  cursor: pointer;
+}
+
+#Contact .fa-facebook {
+  color: #1877f2;
+  cursor: pointer;
+}
+
+#Contact .fa-instagram {
+  color: #c32aa3;
+}
+
+#Contact .fa-twitter {
+  color: #1da1f2;
+}
+
+#Contact .fa-youtube {
+  color: #ff0000;
+}
+
+/* Screen Sizes 500px and Higher */
+@media (min-width: 500px) {
+  header {
+    display: flex;
+    height: 100%;
+  }
+  #header-text {
+    height: 100vh;
+  }
+  #header-image {
+    height: 100vh;
+  }
+}
+
+/* Screen Sizes 700px and Higher */
+@media (min-width: 700px) {
+  .btn {
+    padding: 1rem 3rem;
+  }
+  #BW-label {
+    padding: 1rem 3rem;
+  }
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  left: 35vw;
+}
+
+#Dark_Mode:checked ~ * {
+  filter: invert(100);
+}
+
+#Dark_Mode::before {
+  content: "Dark-Mode";
+  width: 80px;
+  display: flex;
+  color: #fff;
+  background-color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#Dark_Mode:checked::before {
+  content: "Light-Mode";
+  color: #333;
+  background-color: #fff;
+}
+
+/*Prevent Dark M filter: invert for img`s*/
+#images img {
+  filter: inherit;
+}
+
+RL=style.css.map */
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
